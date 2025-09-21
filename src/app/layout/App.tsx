@@ -1,11 +1,11 @@
-import CartifyDashboard from "../../features/dashboard/CartifyDashboard";
+import { Outlet } from "react-router";
 import Nabvar from "./nav/Nabvar";
 
 function App() {
   return (
     <div>
       <Nabvar />
-      <CartifyDashboard />
+      <Outlet />
     </div>
   );
 }
