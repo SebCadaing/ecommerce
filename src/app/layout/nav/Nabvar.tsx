@@ -9,8 +9,9 @@ export default function Nabvar() {
         </a>
 
         <div>
-          <textarea className="w-xl h-8 font-black py-1 bg-base-100 rounded-lg pl-3" placeholder="search here..." rows={1} />
+          <input type="text" placeholder="Search here..." className="input w-xl h-8 font-black py-1 bg-base-100 rounded-lg pl-3 outline-none" />
         </div>
+
         <div className="flex flex-row gap-3 items-center">
           <a className="flex items-center justify-end gap-1">
             <ShoppingCartIcon className="h-10 w-12 text-gray-800 hover:cursor-pointer pb-1" />
