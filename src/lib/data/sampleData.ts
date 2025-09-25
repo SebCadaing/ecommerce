@@ -1,4 +1,8 @@
 import { type Tags } from "../types/productTag";
+export type Variant = {
+  name: string;
+  photoURL: string;
+};
 
 export type Product = {
   id: string;
@@ -6,6 +10,7 @@ export type Product = {
   price: number;
   tags: Tags[];
   photoURL: string;
+  variant?: Variant[];
 };
 
 export const products: Product[] = [
@@ -14,6 +19,13 @@ export const products: Product[] = [
     productName: "Smartwatch Pro",
     price: 199.99,
     tags: ["Electronics", "Accessories"],
+    variant: [
+      {
+        name: "black",
+        photoURL:
+          "https://imgs.search.brave.com/qGo9Hy5HBg_kw1M01Q1vRXlS4SkkMjtkbqaoNBsY1eg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MzcxNjAxNTE2NjMt/YTQxMDMxNWU0ZTc1/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1URjhmSE50/WVhKMEpUSXdkMkYw/WTJoOFpXNThNSHg4/TUh4OGZEQT0",
+      },
+    ],
     photoURL:
       "https://imgs.search.brave.com/qGo9Hy5HBg_kw1M01Q1vRXlS4SkkMjtkbqaoNBsY1eg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MzcxNjAxNTE2NjMt/YTQxMDMxNWU0ZTc1/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1URjhmSE50/WVhKMEpUSXdkMkYw/WTJoOFpXNThNSHg4/TUh4OGZEQT0",
   },
