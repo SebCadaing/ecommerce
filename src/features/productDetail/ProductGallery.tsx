@@ -1,4 +1,4 @@
-import type { Product, Variant } from "../../lib/data/sampleData";
+import type { Product, Variant } from "../../lib/types";
 
 type Props = {
   product: Product | null;

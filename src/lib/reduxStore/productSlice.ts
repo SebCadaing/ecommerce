@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Product } from "../data/sampleData";
+import type { Product } from "../types";
 
 type State = {
   products: Product[];
@@ -30,7 +30,10 @@ export const productSlice = createSlice({
     selectProduct: (state, action: PayloadAction<Product>) => {
       state.selectedProduct = action.payload;
     },
+    addProduct: (state, action: PayloadAction<Product>) => {
+      state.products.push(action.payload);
+    },
   },
 });
 
-export const { setProducts, createProduct, updateProduct, deleteProduct, selectProduct } = productSlice.actions;
+export const { setProducts, createProduct, updateProduct, deleteProduct, selectProduct, addProduct } = productSlice.actions;

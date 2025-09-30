@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { selectProduct } from "../../lib/reduxStore/productSlice";
 import ProductGallery from "./ProductGallery";
 import ProductInfo from "./ProductInfo";
-import type { Variant } from "../../lib/data/sampleData";
+import type { Variant } from "../../lib/types";
 
 export default function ProductDetail() {
   const { id } = useParams();

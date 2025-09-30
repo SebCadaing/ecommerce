@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import type { Product } from "../../lib/data/sampleData";
+import type { Product } from "../../lib/types";
 
 type Props = {
   product: Product;
@@ -19,8 +19,8 @@ export default function CartifyProductCard({ product }: Props) {
           <span className="text-lg font-semibold">${product.price.toFixed(2)}</span>
           <div className="flex flex-wrap gap-2 mt-2">
             {product.tags.map((tag) => (
-              <span key={tag} className="badge badge-outline text-sm">
-                {tag}
+              <span key={tag.key} className="badge badge-outline text-sm">
+                {tag.label}
               </span>
             ))}
           </div>

@@ -5,8 +5,8 @@ export default function CartifyOptions() {
   return (
     <div className="flex flex-row w-full gap-2">
       {ProductTag.map((tag) => (
-        <button key={tag} className="btn btn-lg bg-base-200 rounded-xl font-semibold ">
-          {tag}
+        <button key={tag.key} className="btn btn-lg bg-base-200 rounded-xl font-semibold ">
+          {tag.label}
         </button>
       ))}
       <div className="flex flex-row w-full  justify-end">

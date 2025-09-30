@@ -10,18 +10,15 @@ export default function CartifyDashboard() {
   const appProducts = useAppSelector((state) => state.productSlice.products);
 
   useEffect(() => {
-    dispatch(setProducts(products));
-
-    return () => {
-      dispatch(setProducts([]));
-    };
-  }, [dispatch]);
+    if (appProducts.length === 0) {
+      dispatch(setProducts(products));
+    }
+  }, [dispatch, appProducts.length]);
   return (
     <div className="flex flex-col h-screen px-5 mx-20 pt-20">
       <div className="h-[10%] flex items-center ">
         <CartifyOptions />
       </div>
-
       <div className="h-[90%] grid grid-cols-3 gap-4">
         {appProducts.map((product) => (
           <CartifyProductCard key={product.id} product={product} />
